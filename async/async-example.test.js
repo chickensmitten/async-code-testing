@@ -19,12 +19,14 @@ it("should generate a token value", (done) => {
 });
 
 it("should generate a token value", () => {
+  // testing for promises using .resolves
   const testUserEmail = "test@test.com";
 
   return expect(generateTokenPromise(testUserEmail)).resolves.toBeDefined();
 });
 
 it("should generate a token value", async () => {
+  // testing for promises using async await
   const testUserEmail = "test@test.com";
 
   const token = await generateTokenPromise(testUserEmail);
